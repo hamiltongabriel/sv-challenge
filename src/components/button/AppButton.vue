@@ -2,6 +2,7 @@
   <button
     :class="buttonClass"
     :disabled="disabled"
+    @click="clicked"
   >
     <i v-if="iconName" :class="icon"></i>
     <span v-if="label" v-html="label" />
@@ -45,6 +46,11 @@ export default {
         return 'button-icon-config';
       }
       return 'button-config';
+    },
+  },
+  methods: {
+    clicked() {
+      return this.$emit('clicked');
     },
   },
 };
