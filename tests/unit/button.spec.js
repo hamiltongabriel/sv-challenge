@@ -28,6 +28,13 @@ describe('Test props component', () => {
   });
 });
 
+describe('Methods', () => {
+  const wrapper = mount(AppButton);
+  test('click at the button', () => {
+    wrapper.find('button').trigger('click');
+  });
+});
+
 describe('View button', () => {
   const wrapper = mount(AppButton);
   test('Default button', () => {
